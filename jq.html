@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Screen Width and Height</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    div{
+        width: 500px;
+        height: 200px;
+        background-color: red;
+    }
+  </style>
+</head>
+<body>
+<div></div>
+<script>
+  // Function to get and display screen width and height
+  function updateScreenSize() {
+    var screenWidth = $(window).width();
+    if(screenWidth<=500){
+        $("div").css("background-color","black")
+    }else{
+        $("div").css("background-color","red")
+    }
+  
+  }
+
+  // Initial call to set the initial screen size
+  updateScreenSize();
+
+  // Attach the updateScreenSize function to the window resize event
+  $(window).resize(function() {
+    updateScreenSize();
+  });
+</script>
+
+</body>
+</html>
