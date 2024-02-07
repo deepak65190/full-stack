@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 10px;
+
+        /* transition-duration: .5s;
+            
+            transition-property: all;
+            transition-timing-function: linear; */
+        /* transition-delay: 2s; */
+        transition: all 1s linear;
+       
+      }
+      div:hover {
+        transform: scale(1.2) rotate(45deg);
+filter: blur(5px);
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
